@@ -1,0 +1,194 @@
+/* Ajouter un fond noir grisé à la page et une marge de 0 */
+body {background-color: #2d2d2d;
+margin: 0px;}
+
+/* Ajouter un fond noir au header avec une largeur de 950 pixels et une hauteur de 250 pixels, et définir la position du header en initialisant sa hauteur et en la dirigeant à gauche de 315 pixels */
+header {background-color: #1D1D1D;
+width: 950px;
+height: 250px;
+position : absolute;
+top: 0px;
+left: 315px;}
+
+/* Définir les propriétés de la taille de l'image du logo du header avec une largeur de 400 pixels et une hauteur qui s'adapte à cette propriété , un comportement d'ajustement d'image initialisé sa taille en fonction du champ du header */
+header img {width: 400px;
+height: auto;
+object-fit: cover;
+position: relative;
+top: 0%;}
+
+/* Définir les style des titres des contenus avec une police Inter, une taille de 40px, en gras et une couleur verte */
+h1 {font-family: Inter, sans-serif;
+font-size: 40px;
+font-weight: bold;
+color: #59FF00;}
+
+/* Définir la couleur de fond de la barre de navigation avec la même teinte que le header puis définir sa taille avec une largeur de 315 pixels et une hauteur de 1937 pixels et définir sa position de en initilisant sa hauteur et sa gauche à 0 pixels */
+nav {background-color: #1D1D1D;
+width: 315px;
+height: 1937px;
+position : absolute;
+top: 0px;
+left: 0px;}
+
+/* Enlever les propriétés de styles automatiques des listes afin que nous puissions les personnalisés nous-mêmes */
+ul {list-style: none;}
+
+/* Définir la position de la liste des liens de navigation avec une hauteur de 150 pixels et une largeur non défini (0 pixels) */
+nav ul {position: relative;
+top: 150px;}
+
+/* Définir la marge entre les éléments des liens de la barre de navigation à 150 pixels */
+nav li {margin-bottom: 150px;}
+
+/* Personnaliser la taille des îcones des liens dans la barre de navigation à une hauteur de 60 pixels et une largeur de 60 pixels et appliquer la couleur blanche aux îcônes qui étaient définit sur noir */
+nav img {width: 60px;
+height: 60px;
+filter: invert(100%);
+filter: white(100%);}
+
+/* Disposer les éléments du compte de l'utilisateur de façon flexible puis en colonne pour ensuite qui soient centré puis définir leur position en relatif et les déplacer à une hauteur de 90 pixels */
+.compte {display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+top: 90px;}
+
+/* Définir la couleur de fond du cercle du compte avec une couleur violette, une largeur de 100 pixels, une hauteur de 100 pixels, un rayon de bord arrondi à 50% et afficher le cercle en flexbox pour centrer les éléments qu'il contient */
+.cercle-compte {background-color: #5e00b1;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;}
+
+/* Définir les propriétés des initiales du compte avec une couleur blanche, une police Inter et une taille de 30px */
+.initials {color: white;
+font-family: Inter, sans-serif;
+font-size: 30px;}
+
+/* Définir les propriétés du pseudo de l'utilisateur avec une couleur blanche, une police Inter et une taille de 23px et la centré par rapport au cercle */
+.pseudo {color: white;
+font-family: Inter, sans-serif;
+font-size: 23px;
+text-align: center;}
+
+/* Définir les propriétés des liens de navigation en enlevant les styles automatiques, en leur appliquant une couleur blanche, une taille de 30 pixels, une police Inter et définir leur disposition en grille pour pouvoir leur appliquer un espacement de 10 pixels en répétant le ^processus 3 fois en 1 fractionentre chaque lien et enfin leur appliquer une hauteur de champs de 224 pixels, les positionner à doite de la barre de navigation à 10%, définir un padding de 10 pixels et une marge de 50 pixels en haut et 50 pixels en bas */
+nav a {list-style: none;
+text-decoration: none;
+color: white;
+font-size: 30px;
+font-family: Inter, sans-serif;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px;
+padding: 83px;
+align-items: center;
+width: 224px;
+position: right (10%);
+padding: 10px;
+margin-top: 50px;
+margin-bottom: 50px;}
+
+/* Définir la couleur du lien creations de la barre de navigation en vert et une épaisseur définit en gras et un soulignement */
+.creations {color: #59FF00;
+font-weight: bold;
+text-decoration: underline;}
+
+/* Définir les propriétés des liens dans le contenu principal avec une couleur verte, une police Inter et une taille de 30px et une marge de 5 pixels*/
+
+main a {text-decoration: none;
+color: #59FF00;
+font-family: Inter, sans-serif;
+font-size: 30px;
+margin: 5px;}
+
+/* Définir les propriétés des titres dans le contenu principal avec une couleur blanche, en gras, une police Inter et une taille de 30px et une marge de 5 pixels */
+main h2 {font-family: Inter, sans-serif;
+font-size: 30px;
+color: white;
+font-weight: bold;
+margin: 5px;}
+
+/* Définir la couleur des lien au survol en vert et une épaisseur définit en gras et un soulignement */
+a:hover {color: #59FF00;
+font-weight: bold;
+text-decoration: underline;}
+
+/* Définir la zone principale des contenus avec une position absolue à 370 pixels en haut et 450 pixels à gauche */
+main {position : absolute;
+top: 370px;
+left: 450px;}
+
+/* Définir les propriétés des images dans la zone principale avec une largeur de 190 pixels, une hauteur de 190 pixels et un comportement d'ajustement d'image */
+main img {width: 190px;
+height: 190px;
+object-fit: cover;
+margin: 5px;}
+
+/* Définir les propriétés des div des sections du contenu principal avec un affichage flexible en colonne, un alignement centré et une position relative à 20 pixels en haut et une bordure blache de taille 3 pixels */
+main section div {display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+top: 20px;
+border: solid;
+border-color: white;
+border-width: 3px;}
+
+/* Définir les propriétés de la section de classe "avatars" du contenu principal en disposant les éléments en grille, en répétant le processus 3 fois en 1 fraction et en appliquant un espacement de 50 pixels entre chaque élément */
+.avatars {display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 50px;}
+
+/* Définir les propriétés du bouton de création d'avatar avec une couleur de fond verte, en gras, sans bordure, un rayon de bord arrondi de 10 pixels, une couleur de texte blanche, une police Inter, une taille de police de 30px, une largeur de 501 pixels, une hauteur de 95 pixels et une position relative à 200 pixels en haut et 95 pixels à gauche et un curseur qui pointe */
+button {background-color: #59FF00;
+border-style: none;
+border-radius: 10px;
+color: white;
+font-family: Inter, sans-serif;
+font-size: 30px;
+font-weight: bold;
+width: 501px;
+height: 95px;
+position: relative;
+top: 200px;
+left: 95px;
+cursor: pointer;}
+
+/* Définir les propriétés du bouton au survol en changeant la couleur de fond en blanche et la couleur du texte en vert */
+button:hover {background-color: white;
+color: #59FF00;}
+
+/* Définir les propriétés du pied de page avec un fond identique au header et à la navigation, une largeur de 1270 pixels, une hauteur de 403 pixels et une position absolue à 1850 pixels en bas et 0 pixels à gauche */
+footer {background-color: #1D1D1D;
+width: 1270px;
+height: 403px;
+position : absolute;
+top: 1850px;
+left: 0px;}
+
+/* Enlever la marge de la liste des liens du pied de page */
+footer ul {margin: 0px}
+
+/* Définir les propriétés des éléments de la liste du pied de page avec une position relative de 80 pixels en haut et une marge de 20 pixels en bas */
+footer li {position: relative;
+top: 80px;
+margin-bottom: 20px;}
+
+/* Définir les propriétés des liens du pied de page en enlevant le style des liens automatique, et en les définissant nous-mêmes avec une couleur blanche, une taille de 23px et une police Inter */
+footer a {list-style: none;
+text-decoration: none;
+color: white;
+font-size: 23px;
+font-family: Inter, sans-serif;}
+
+/* Définir les propriétés du paragraphe du pied de page avec une couleur blanche, une taille de police de 20px, une police Inter et une position relative à 270 pixels en haut et 500 pixels à gauche et enlever la marge définit automatiquement */
+footer p{color: white;
+font-size: 20px;
+font-family: Inter, sans-serif;
+position: relative;
+top: 270px;
+left: 500px;
+margin: 0px;}
