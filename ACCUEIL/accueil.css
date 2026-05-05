@@ -1,20 +1,91 @@
-html {position: relative;
-min-height: 100%;
+html{
+    position: relative;
+    min-height: 100%;
 }
 
-main {margin-bottom: 100px;}
-
-footer {padding: 20px;
-margin-bottom: 0px;
-position: absolute;
-bottom: 0;
-width: 100%;
+main{
+    margin-bottom: 100px;
 }
 
-a {text-decoration: none;
-color: white;
+.navbar-brand{
+    font-family: 'Jersey 25', sans-serif;
+    font-size: 20px;
+    color: transparent;
+    background-image: linear-gradient(#003cff, #00ff44);
+    background-clip: text;
 }
 
-footer p {margin-top: 20px;
-font-size: 12px;
+.hero-scene{
+    position: relative;
+    &::before{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-image: url(../IMAGES/Introduction.jpg);
+        background-size: cover;
+        filter: brightness(0.3);
+    }
+
+    *{
+        /*Positionner les éléments devant le ::before*/
+        position:relative;
+    }
+
+    .hero-scene-content{
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+h1 {
+    font-family: 'Limelight', sans-serif;
+    font-size: 20px;
+    color: transparent;
+    background-image: linear-gradient(to right, #00ffe5, #ff00ff);
+    background-clip: text;
+}
+
+h2{
+    font-size: 15px;
+}
+
+p{
+    font-size: 12px;
+}
+
+.hero-scene button{
+    border-style: none;
+    background: linear-gradient(to right, #f600ff, #1500ff);
+    color: white;
+    border-radius: 5px;
+    width: 160px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+footer{
+    padding: 20px;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
 }
