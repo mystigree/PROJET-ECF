@@ -61,13 +61,20 @@ p{
 
 .hero-scene button{
     border-style: none;
-    background: linear-gradient(to right, #f600ff, #1500ff);
+    background-image: linear-gradient(to right, #f600ff, #1500ff, #00bbff, #ff00dd);
+    background-size: 200%;
     color: white;
     border-radius: 5px;
     width: 160px;
     height: 30px;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
+    transition: 0.4s ease-out;
+}
+
+.hero-scene button:hover{
+    color: white;
+    background-position: 100%;
 }
 
 footer{
