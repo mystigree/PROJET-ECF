@@ -1,115 +1,201 @@
 <!DOCTYPE html>
-
-<!-- Déclaration de la balise html pour la page d'accueil du site-->
-<html>
-
-<!-- Déclaration de la balise head -->
+<html lang="fr">
 <head>
-    <!--Ajouter un titre à l'onglet du site-->
-    <title>PixelVerse Studio</title>
-    <!--Lier nôte document HTML à la notre feuille de style CSS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se connecter</title>
+    <!--Lien vers les composants Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!--Lien vers la police de caractères Jersey 25 de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <!--Lien vers la police de caractères Limelight de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <!-- Lien vers la police de caractères Keania One de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Lien vers la police de cerectères Kdam Thmor Pro-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap" rel="stylesheet">
+    <!--Lien vers le fichier CSS personnalisé de la page de connection-->
     <link rel="stylesheet" href="se_connecter.css">
 </head>
-
-<!-- Déclaration de la balise body -->
 <body>
 
-    <!-- Ajouter l'en-tête du site -->
     <header>
-        <!-- Insérer l'image du logo du site-->
-        <img src="../images/Logo PixelVerse Studio.png" alt="Logo PixelVerse Studio">
+      
+      <!-- Barre de navigation personnalisée de Bootstrap-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+
+        <div class="container-fluid">
+          <div class="pseudo">
+            <div class="cerclepseudo">P</div>
+            <p class="textpseudo">Pseudo</p>
+          </div>
+          <div class="mx-lg-5 d-flex align-items-center">
+            <img class="logo" src="../IMAGES/Logo.jpg" alt="Logo PixelVerse Studio"/>
+            <a class="navbar-brand" href="/">PixelVerse Studio</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Se Connecter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Créations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </nav>
+
     </header>
 
-    <!-- Déclarer la barre de menu du site -->
-    <nav>
+    <div class="hero-scene text-center text-white">
+      <div class="hero-scene-content">
+        <h2>Bienvenu sur</h2>
+        <h1>PixelVerse Studio !!!</h1>
+        <p>Créer et personnalisez vos propres avatars :</p>
+        <button class="button">Connectez-vous !!!</button>
+      </div>
+    </div>
 
-        <!-- Insérer un compte -->
-        <section class = "compte">
-            <!-- Créer le cercle du compte et insérer les initials du compte-->
-            <div class="cercle-compte">
-                <p class="initials">P</p>
+    <main>
+
+        <div class="d-flex row justify-content-center">
+            <p class="BeforeConnexion col-8">Si vous avez déjà crée un compte, veuillez vous connecter à votre compte en remplissant les informations ci-dessous.</p>
+        </div>
+
+        <form>
+            <div class="connexion row justify-content-center">
+                <article class="content col-8">
+                    <div class="mb-3">
+                        <label for="EmailInput">Adresse e.mail:</label>
+                        <input type="email" class="w-100" id="EmailInput" placeholder="adresse@adresseemail.com">
+                    </div>
+                </article>
+
+                <article class="content col-8">
+                    <div class="mb-3">
+                        <label for="PasswordInput">Mot de passe:</label>
+                        <input type="password" class="w-100" id="PasswordInput" placeholder="password1234">
+                    </div>
+                </article>
             </div>
-            <!-- Insérer le pseudo du compte-->
-            <div class="pseudo">
-                <p>Pseudo</p>
+
+            <div class="d-flex flex-row justify-content-center">
+                <button class="button button-connexion col-8" type="submit">Se connecter</button>
             </div>
-        </section>
+            
+        </form>
 
-        <!-- Insérer tous les liens de la barre de menu avec leur icône et leur texte -->
-        <ul>
-            <li><a class="accueil" href="../ACCUEIL/accueil.html"> <img src="../images/Icône Accueil.png" alt="Icône Accueil">Accueil</a></li>
-            <li><a class="se_connecter" href="../SE_CONNECTER/se_connecter.html"><img src="../images/Icône Se Connecter.png" alt="Icône Se Connecter">Se Connecter</a></li>
-            <li><a class="creations" href="../CREATIONS/creations.html"><img src="../images/Icône Créations.png" alt="Icône Créations">Créations</a></li>
-            <li><a class="contact" href="../CONTACT/contact.html"><img src="../images/Icône Contact.png" alt="Icône Contact">Contact</a></li>
-        </ul>
-    </nav>
+        <div class="d-flex row justify-content-center">
+            <p class="AfterConnexion col-8">Si vous n'avez pas encore crée de compte, veuillez vous inscrire sur le site en cliquant sur la flèche.</p>
+            <a href="#" class="s'inscrire col-8">> S'inscrire</a>
+        </div>
 
-    <!-- Ajouter le contenu principal du site -->
-     <main>
+        <section class="comments row justify-content-center">
+        <h3 class="text-center">Avis :</h3>
+        <article class="comment1 col-8">
+          <div class="container">
+            <time class="d-flex align-items-end flex-row-reverse" datetime="2026-02-19">19 Février 2026</time>
+             <div class="pseudo1 d-flex flex-row">
+                <div class="pseudomessage cerclepseudo1">P</div>
+                <p class="textpseudo1">Pseudo 1</p>
+             </div> 
+             <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+             </div>
+             <h5>Titre Pseudo 1</h5>
+             <p class="textmessage">Ce site est excellent !!!</p>
+             <div class="interactions d-flex flex-lg-row flex-fill bd-highlight">
+              <div class="like d-flex flex-row">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <p>Utile</p>
+              </div>
+              <div class="share d-flex flex-row">
+                <i class="bi bi-share"></i>
+                <p>Partager</p>
+              </div>
+             </div>
+          </div>
+        </article>
 
-        <!-- Créer une section qui a pour classe "ParagrapheConnection" -->
-        <section class="ParagrapheConnection">
-            <!-- Insérer un paragraphe qui décrit les champs à saisir pour se connecter -->
-            <p>Si vous avez déjà créer un compte, veuillez vous connecter à votre compte en remplissant les informations ci-dessous.</p>
-        </section>
+        <article class="comment2 col-8">
+          <div class="container">
+            <time class="d-flex align-items-end flex-row-reverse" datetime="2026-01-10">10 Janvier 2026</time>
+            <div class="pseudo2 d-flex flex-row">
+                <div class="pseudomessage cerclepseudo2">P</div>
+                <p class="textpseudo2">Pseudo 2</p>
+             </div> 
+             <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+             </div>
+             <h5>Titre Avis 2</h5>
+             <p class="textmessage">Je trouve le concept de ce site très intéressant.</p>
+             <div class="interactions d-flex flex-lg-row flex-fill bd-highlight">
+              <div class="like d-flex flex-row">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <p>Utile</p>
+              </div>
+              <div class="share d-flex flex-row">
+                <i class="bi bi-share"></i>
+              <p>Partager</p>
+             </div>
+            </div>
+          </div>
+        </article>
 
-        <!-- Créer une autre section qui a pour classe "connection" -->
-        <section class="connection">
-
-            <!-- Créer un formulaire pour recueillir les informations des utilisateurs pour se connecter -->
-            <form action="#" method="POST">
-                
-                <!-- Créer une div qui a pour classe "adresseemail"-->
-                <div class="adresseemail">
-                    <!-- Créer un champ pour l'adresse e-mail de l'utilisateur -->
-                    <label class="labelemail" for="email">E-mail :</label>
-                    <input class="inputemail" type="email" id="email" name="email" placeholder="pseudo@gmail.com" required>
-                </div>
-
-                <!-- Créer une div qui a pour classe "motdepasse"-->
-                <div class="motdepasse">
-                    <!-- Créer un champ pour le mot de passe de l'utilisateur -->
-                    <label class="labelmotdepasse" for="motdepasse">Mot de passe :</label>
-                    <input class="inputmotdepasse" type="password" id="motdepasse" name="motdepasse" required>
-                    <a href="" class="motdepasseoublie">Mot de passe oublié</a>
-                </div>
-                        
-                <!-- Créer une div qui a pour classe "envoyer"-->
-                <div class="envoyer">
-                    <!-- Créer un bouton pour soumettre le formulaire -->
-                    <button type="submit">Se Connecter</button>
-                </div>
-
-            </form>
-
-        </section>
-
-        <!-- Insérer l'icône pour voir le mot de passe -->
-        <img class="eyeclosemotdepasse" src="../IMAGES/Eye Close.png" alt="Eye Close">
-
-        <!-- Créer une section qui a pour classe "S_Inscrire" -->
-        <section class="S_Inscrire">
-            <!-- Insérer un paragraphe qui décrit le lien auquel vous dirigez pour vous inscrire -->
-            <p>Si vous n'avez pas encore créer de compte, veuillez vous inscrire sur le site en cliquant sur la flèche</p>
-
-            <!-- Insérer un lien qui redirige vers la page d'inscription -->
-            <a class="Lien_S_Inscrire" href="../SE_CONNECTER/s_inscrire.html">> S'inscrire</a>
-        </section>
-
-     </main>
-
-     <!-- Ajouter le pied de page du site -->
-    <footer>
-        <!-- Liens amenants aux contacts et mentions légales du site -->
-        <ul>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Mentions Légales</a></li>
-        </ul>
-        <!-- Informations du copyright -->
-        <p>&copy; 2024 PixelVerse Studio. Tous droits réservés.</p>
+      </section>
+      
+      <div class="d-flex flex-row justify-content-center">
+        <button class="button plus">Plus</button>
+      </div>
+        
+    </main>
+    
+    <footer class="bg-dark text-white">
+      <div>
+        <a href="#">Nous contacter</a>
+      </div>
+      <div class="d-lg-flex justify-content-between">
+        <div>
+          <a href="#">Mentions légales</a>
+        </div>
+        <div>
+          <a href="#">Conditions générales de ventes</a>
+        </div>
+      </div>
+      <p class="text-center">
+        © 2025 PixelVerse Studio. Tous droits réservés.
+      </p>
     </footer>
 
     <script src="se_connecter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 
