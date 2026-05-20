@@ -3,6 +3,11 @@ html{
     min-height: 100%;
 }
 
+body{
+    background-image: url(../IMAGES/Image\ de\ fond.png);
+    background-size: cover;
+}
+
 main{
     margin-bottom: 100px;
 }
@@ -28,6 +33,42 @@ main{
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: white;
+}
+
+time{
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.bi-star-fill {
+    font-size: 26px;
+}
+
+.stars {
+    margin-top: 10px;
+}
+
+.comment1 .bi-star-fill {
+    background: linear-gradient(to right, #fbff00, #ff00d0);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.comment2 .bi-star-fill {
+    background: linear-gradient(to right, #eaff00, #e500ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bi-hand-thumbs-up {
+    color: white;
+    font-size: 30px;
+}
+
+.bi-share {
+    color: white;
+    font-size: 25px;
 }
 
 .logo {
@@ -97,13 +138,59 @@ h3{
     background-clip: text;
 }
 
-main p{
+.presentation p{
     color: white;
     font-size: 12px;
     font-family: 'Kdam Thmor Pro', sans-serif;
 }
 
-.hero-scene button{
+h5{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    width: fit-content;
+}
+
+.textmessage{
+    margin-top: 20px;
+}
+
+.like{
+    margin-right: 50px;
+    width: fit-content
+}
+
+.bi.bi-share{
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+.bi.bi-hand-thumbs-up{
+    margin-right: 10px;
+}
+
+.share{
+    width: fit-content
+}
+
+.interactions p {
+    padding-top: 10px;
+}
+
+.share p{
+    padding-left: 5px;
+}
+
+.comments p{
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    width: fit-content
+}
+
+.button{
     border-style: none;
     background-image: linear-gradient(to right, #f600ff, #1500ff, #00bbff, #ff00dd);
     background-size: 200%;
@@ -116,9 +203,15 @@ main p{
     transition: 0.4s ease-out;
 }
 
-.hero-scene button:hover{
+.button:hover{
     color: white;
     background-position: 100%;
+}
+
+.button.plus{
+    width: 80px;
+    height: 60px;
+    border-radius: 20px;
 }
 
 main{
@@ -162,6 +255,52 @@ a{
     font-family: 'Inter', sans-serif;
 }
 
+.comments.h3{
+    font-size: 30px;
+}
+
+.pseudomessage{
+    margin-right: 10px;
+}
+
+.pseudomessage.cerclepseudo1{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #b700a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+}
+
+.textpseudo1{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.pseudomessage.cerclepseudo2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #009dff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+}
+
+.textpseudo2{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
 footer p {
     margin-top: 20px;
     font-size: 12px;
@@ -178,4 +317,16 @@ footer p {
     .container{
         padding: 0px;
     }
+
+    time{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .interactions{
+            flex-direction: column;
+            align-items: start;
+        }   
 }
