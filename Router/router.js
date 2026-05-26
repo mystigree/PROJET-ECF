@@ -1,69 +1,148 @@
 import Route from "./Route.js";
+
 import { allRoutes, websiteName } from "./allRoutes.js";
 
-// Création d'une route pour la page 404 (page introuvable)
-const route404 = new Route("404", "Page introuvable", "/pages/404.html");
 
-// Fonction pour récupérer la route correspondant à une URL donnée
+
+// Loader
+
+const loader = document.getElementById("loader");
+
+const showLoader = () => loader?.classList.remove("hidden");
+
+const hideLoader = () => loader?.classList.add("hidden");
+
+
+
+const route404 = new Route("404", "Page introuvable", "./pages/404.html");
+
+
+
 const getRouteByUrl = (url) => {
-  let currentRoute = null;
-  // Parcours de toutes les routes pour trouver la correspondance
-  allRoutes.forEach((element) => {
-    if (element.url == url) {
-      currentRoute = element;
-    }
-  });
 
-  // Si aucune correspondance n'est trouvée, on retourne la route 404
-  if (currentRoute != null) {
-    return currentRoute;
-  } else {
-    return route404;
-  }
+ return allRoutes.find(r => r.url === url) || route404;
+
 };
 
-// Fonction pour charger le contenu de la page
+
+
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+
+
 const LoadContentPage = async () => {
-  const path = window.location.pathname;
-  // Récupération de l'URL actuelle
-  const actualRoute = getRouteByUrl(path);
-  // Récupération du contenu HTML de la route
-  const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
-  // Ajout du contenu HTML à l'élément avec l'ID "main-page"
-  document.getElementById("main-page").innerHTML = html;
-  
-  // Ajout du contenu JavaScript
-  if (actualRoute.pathJS != "") {
-    // Création d'une balise script
-    var scriptTag = document.createElement("script");
-    scriptTag.setAttribute("type", "text/javascript");
-    scriptTag.setAttribute("src", actualRoute.pathJS);
 
-    // Ajout de la balise script au corps du document
-    document.querySelector("body").appendChild(scriptTag);
-  }
+ const path = window.location.pathname;
 
-  // Changement du titre de la page
-  document.title = actualRoute.title + " - " + websiteName;
+ const actualRoute = getRouteByUrl(path);
+
+ const main = document.getElementById("main-page");
+
+
+
+ // Affiche le loader immédiatement
+
+ const loaderTimeout= setTimeout(showLoader,200);
+
+ // Lance le fetch en parallèle de l'animation
+
+ const fetchPromise = fetch(actualRoute.pathHtml).then(res => res.text());
+
+
+
+ // Animation de sortie
+
+ main.classList.add("page-exit");
+
+
+
+ // Nettoyage de l'ancien module
+
+ if (window.currentModule?.cleanup) window.currentModule.cleanup();
+
+
+
+ // Attend animation + fetch (le plus long des deux)
+
+ const [html] = await Promise.all([fetchPromise, wait(500)]);
+
+
+
+ // Injection du contenu (toujours invisible grâce à page-exit)
+
+ main.innerHTML = html;
+
+ document.title = actualRoute.title + " - " + websiteName;
+
+ window.scrollTo(0, 0);
+
+
+
+ // Cache le loader juste avant l'animation d'entrée
+
+ clearTimeout(loaderTimeout);
+
+ hideLoader();
+
+
+
+ // Bascule vers l'animation d'entrée
+
+ main.classList.remove("page-exit");
+
+ main.classList.add("page-enter");
+
+
+
+ requestAnimationFrame(() => {
+
+ requestAnimationFrame(() => {
+
+ main.classList.remove("page-enter");
+
+ });
+
+ });
+
+
+
+ // Chargement du JS en arrière-plan
+
+ if (actualRoute.pathJS) {
+
+ import(actualRoute.pathJS).then(module => {
+
+ window.currentModule = module;
+
+ if (module.init) module.init();
+
+ });
+
+ }
+
 };
 
-// Fonction pour gérer les événements de routage (clic sur les liens)
+
+
 const routeEvent = (event) => {
-  event = event || window.event;
-  event.preventDefault();
 
-  // Mise à jour de l'URL dans l'historique du navigateur
-  window.history.pushState({}, "", event.target.href);
+ event.preventDefault();
 
-  // Chargement du contenu de la nouvelle page
-  LoadContentPage();
+ window.history.pushState({}, "", event.target.href);
+
+ LoadContentPage();
+
 };
 
-// Gestion de l'événement de retour en arrière dans l'historique du navigateur
+
+
 window.onpopstate = LoadContentPage;
 
-// Assignation de la fonction routeEvent à la propriété route de la fenêtre
 window.route = routeEvent;
 
-// Chargement du contenu de la page au chargement initial
+
+
 LoadContentPage();
+
+
+
