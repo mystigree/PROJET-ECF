@@ -69,12 +69,6 @@ h5{
     background-position: 100%;
 }
 
-span{
-    color: transparent;
-    background-image: linear-gradient(to right, #dd00ff, #ff00b2);
-    background-clip: text;
-}
-
 ::placeholder{
     font-family: 'Inter', sans-serif;
     font-size: 15px;
@@ -361,53 +355,27 @@ footer p {
     font-family: 'Inter', sans-serif;
 }
 
-/* Ajout des medias queries pour différentes tailles d'écrans*/
-@media (max-width: 768px) {
-
-    .col.img-container{
-        width: 100px;
-        height: 100px;
-    }
-
-    .container{
-        padding: 0px;
-    }
-
-    .AvatarField{
-        margin: 30px;
-    }
-
-    .search{
-        margin-bottom: 80px
-    }
-
-    time{
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 576px) {
-
-    .interactions{
-            flex-direction: column;
-            align-items: start;
-        }   
-}
-
 /*Ajout des propriétés de la page accueil*/
 .pageaccueil p{
     font-size: 12px;
 }
 
-.presentation .col.img-container{
+.img-container{
     width: 200px;
+    height: 200px;
 }
 
-.presentation img{
+.pageaccueil img{
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.pageaccueil span{
+    color: transparent;
+    background-image: linear-gradient(to right, #dd00ff, #ff00b2);
+    background-clip: text;
 }
 
 /*Ajout des propriétés de la page se connecter*/
@@ -553,4 +521,51 @@ select{
 /*Ajout des propriétés de la page contact*/
 #Message{
     height: 200px;
+}
+
+.pagecontact label{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Keania One', cursive;
+    color: transparent;
+    background-image: linear-gradient(to right, #59ff00, #00ffd4);
+    background-clip: text;
+}
+
+/* Ajout des medias queries pour différentes tailles d'écrans*/
+@media (max-width: 768px) {
+
+    .img-container{
+        width: 100px;
+        height: 100px;
+    }
+
+    img.img-fluid{
+        width: 100px;
+        height: 100px;
+    }
+
+    .container{
+        padding: 0px;
+    }
+
+    .AvatarField{
+        margin: 30px;
+    }
+
+    .search{
+        margin-bottom: 80px
+    }
+
+    time{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .interactions{
+            flex-direction: column;
+            align-items: start;
+        }   
 }
