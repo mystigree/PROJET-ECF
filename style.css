@@ -4,7 +4,8 @@ html{
 }
 
 body{
-    background-image: url(/IMAGES/Image\ de\ fond.png);
+    background: rgba(0, 0, 0, 0.7) url(/IMAGES/Image\ de\ fond.png);
+    background-blend-mode: darken;
     background-size: cover;
 }
 
@@ -49,6 +50,15 @@ h5{
     font-family: 'Inter', sans-serif;
     color: white;
     width: fit-content;
+}
+
+h6{
+    font-size: 40px;
+    margin-bottom: 80px;
+    font-family: 'Keania One', cursive;
+    color: transparent;
+    background-image: linear-gradient(to right, #59ff00, #00ffd4);
+    background-clip: text;
 }
 
 .button{
@@ -468,7 +478,7 @@ footer p {
     margin: 70px;
 }
 
-.search input{
+.inputsearch{
     background-color: #1D1D1D;
     height: 30px;
     color: white;
@@ -554,7 +564,7 @@ select{
     }
 
     .search{
-        margin-bottom: 80px
+        margin-top: 10px;
     }
 
     time{
