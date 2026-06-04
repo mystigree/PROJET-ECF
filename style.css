@@ -452,6 +452,124 @@ footer p {
     border: 3px solid white;
 }
 
+/*Ajout des propriétés de la page mon compte*/
+.pageaccount a{
+    font-size: 15px;
+}
+
+.pageaccount p{
+    font-size: 20px;
+}
+
+.MessageAccount{
+    padding: 10px;
+}
+
+.pageaccount label{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Keania One', cursive;
+    color: transparent;
+    background-image: linear-gradient(to right, #59ff00, #00ffd4);
+    background-clip: text;
+}
+
+.account input {
+    background-color: #1D1D1D;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.button-delete{
+    border-style: none;
+    background-image: linear-gradient(to right, #970023, #ff0000, #ffa200, hsl(55, 100%, 50%));
+    background-size: 200%;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: 0.4s ease-out;
+}
+
+.button-delete:hover{
+    color: white;
+    background-position: 100%;
+}
+
+.button-modify{
+    border-style: none;
+    background-image: linear-gradient(to right, #007d3a, #00c04a, #04ff00, #e9ff6b);
+    background-size: 200%;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: 0.4s ease-out;
+}
+
+.button-modify:hover{
+    color: white;
+    background-position: 100%;
+}
+
+/*Ajout des propriétés de la page modifier mon mot de passe*/
+.pageeditPassword a{
+    font-size: 15px;
+}
+
+.pageeditPassword p{
+    font-size: 20px;
+}
+
+.MessageeditPassword{
+    padding: 10px;
+}
+
+.pageeditPassword label{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Keania One', cursive;
+    color: transparent;
+    background-image: linear-gradient(to right, #59ff00, #00ffd4);
+    background-clip: text;
+}
+
+.editPassword input {
+    background-color: #1D1D1D;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.button-editPassword{
+    border-style: none;
+    background-image: linear-gradient(to right, #f600ff, #1500ff, #00bbff, #ff00dd);
+    background-size: 200%;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: 0.4s ease-out;
+}
+
+.button-editPassword:hover{
+    color: white;
+    background-position: 100%;
+}
+
 /*Ajout des propriétés de la page créations*/
 .pageavatars p{
     font-size: 20px;
