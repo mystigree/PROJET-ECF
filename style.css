@@ -118,7 +118,7 @@ textarea{
     padding-top: 20px;
 }
 
-.cerclepseudo{
+.circlepseudo{
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -292,7 +292,7 @@ time{
     margin-right: 10px;
 }
 
-.pseudomessage.cerclepseudo1{
+.pseudomessage.circlepseudo1{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -311,7 +311,7 @@ time{
     color: white;
 }
 
-.pseudomessage.cerclepseudo2{
+.pseudomessage.circlepseudo2{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -366,7 +366,7 @@ footer p {
 }
 
 /*Ajout des propriétés de la page accueil*/
-.pageaccueil p{
+.pagehome p{
     font-size: 12px;
 }
 
@@ -375,33 +375,33 @@ footer p {
     height: 200px;
 }
 
-.pageaccueil img{
+.pagehome img{
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.pageaccueil span{
+.pagehome span{
     color: transparent;
     background-image: linear-gradient(to right, #dd00ff, #ff00b2);
     background-clip: text;
 }
 
 /*Ajout des propriétés de la page se connecter*/
-.pageconnection p{
+.pagesignin p{
     font-size: 20px;
 }
 
-.pageconnection a{
+.pagesignin a{
     font-size: 15px;
 }
 
-.MessageConnection{
+.MessageSignup{
     padding: 10px;
 }
 
-.pageinscription label{
+.pagesignin label{
     margin-bottom: 20px;
     font-size: 20px;
     font-family: 'Keania One', cursive;
@@ -410,7 +410,7 @@ footer p {
     background-clip: text;
 }
 
-.connexion input {
+.signin input {
     background-color: #1D1D1D;
     height: 40px;
     color: white;
@@ -421,19 +421,19 @@ footer p {
 }
 
 /*Ajout des propriétés de la page inscription*/
-.pageinscription a{
+.pagesignup a{
     font-size: 15px;
 }
 
-.pageinscription p{
+.pagesignup p{
     font-size: 20px;
 }
 
-.MessageInscription{
+.MessageSignin{
     padding: 10px;
 }
 
-.pageconnection label{
+.pagesignup label{
     margin-bottom: 20px;
     font-size: 20px;
     font-family: 'Keania One', cursive;
@@ -442,7 +442,7 @@ footer p {
     background-clip: text;
 }
 
-.inscription input {
+.signup input {
     background-color: #1D1D1D;
     height: 40px;
     color: white;
@@ -453,11 +453,11 @@ footer p {
 }
 
 /*Ajout des propriétés de la page créations*/
-.pagecreation p{
+.pageavatars p{
     font-size: 20px;
 }
 
-.pagecreation a{
+.pageavatars a{
     font-size: 15px;
     width: 80px;
     border-width: 5px;
@@ -564,7 +564,7 @@ select{
     }
 
     .search{
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     time{
